@@ -60,7 +60,7 @@ inline double SimpsonIntegrateMethod(double lower, double upper, double m, doubl
     double integ = 0;
     double x = 0;
     int iter = 0;
-    double delta = 1E-4;
+    double delta = 5E-5;
     int maxiter = 10000;
     x = lower;
     while(iter < maxiter)
@@ -93,5 +93,5 @@ inline double finv(double x, double m, double n)
 }
 
 
-};
+}
 #endif
