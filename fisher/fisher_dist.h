@@ -32,6 +32,8 @@
 #include <iostream>
 #include <vector>
 
+namespace Fisher_Dist{
+
 /*! \brief Calculates the fisher distribution for an x value between 0 and 1
  * \sa f_dist(double x, double m, double n)
  * \param x value
@@ -90,4 +92,6 @@ inline double finv(double x, double m, double n)
     return f_value;
 }
 
+
+};
 #endif

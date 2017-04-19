@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
     std::cout << std::endl <<  "enter df1: "; std::cin >> m;
     std::cout << std::endl <<  "enter df1: "; std::cin >> n;
     try{
-    std::cout << "f value is " << finv(p,m,n) << std::endl;
+    std::cout << "f value is " << Fisher_Dist::finv(p,m,n) << std::endl;
     }
     catch (int result)
     {
