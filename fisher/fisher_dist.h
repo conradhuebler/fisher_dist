@@ -87,6 +87,8 @@ namespace Fisher_Dist{
     {
         if(x > 1 || x < 0)
             throw (-1);
+        if(m <= 0 || n <= 0)
+            throw -2;
         double f_value;
         
         if(x < 0.5) // use symmetric relationship
