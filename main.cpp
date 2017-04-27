@@ -24,7 +24,7 @@
  * Simple test case for the finv functions
  */
 
-#include "src/fisher_dist.h"
+#include "fisher/fisher_dist.h"
 
 #include <iostream>
 
