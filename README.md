@@ -16,3 +16,4 @@ finv(x, m, n)
 
 x - quantile
 m, n - degrees of freedom
+m and n should each be lower than 250 and in sum lower than 256. If they are greater, they will be altered to the highest allowed value, the result will then differ in the third decimal place.

@@ -29,20 +29,34 @@
 #include <iostream>
 
 int main(int argc, char **argv) {
-    double p = 0;
-    double m = 0;
-    double n = 0;
-    std::cout << "p: "; 
-    std::cin >> p;
-    std::cout << std::endl <<  "enter df1: "; std::cin >> m;
-    std::cout << std::endl <<  "enter df2: "; std::cin >> n;
-    try{
-    std::cout << "f value is " << Fisher_Dist::finv(p,m,n) << std::endl;
-    }
-    catch (int result)
+    if(argc == 1)
     {
-        if(result == -1)
-            std::cout << "x must lie between 0 and 1, sorry" << std::endl;
+        double p = 0;
+        double m = 0;
+        double n = 0;
+        std::cout << "p: "; 
+        std::cin >> p;
+        std::cout << std::endl <<  "enter df1: "; std::cin >> m;
+        std::cout << std::endl <<  "enter df2: "; std::cin >> n;
+        try{
+        std::cout << "f value is " << Fisher_Dist::finv(p,m,n) << std::endl;
+        }
+        catch (int result)
+        {
+            if(result == -1)
+                std::cout << "x must lie between 0 and 1, sorry" << std::endl;
+        }
+    }else
+    {
+        for(int i = 5; i < 300; ++i)
+        {
+            for(int j = 230; j < 250; ++j)
+            {
+                double f_value = Fisher_Dist::finv(0.95,double(j),double(i));
+                std::cout << "f value for finv(0.95," << j << ","<< i <<") is: " << f_value << std::endl;
+            }
+        }
+        
     }
     return 0;
 }
